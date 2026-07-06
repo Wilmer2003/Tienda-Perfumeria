@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essence & Co. — Catálogo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/catalogo.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="brand">Essence <span>&</span> Co.</div>
+  <div class="search-wrap">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input id="searchInput" type="text" placeholder="Buscar por nombre, código o categoría">
+  </div>
+  <div class="cap-pills">
+    <button class="pill" data-cap="50">50 ml</button>
+    <button class="pill" data-cap="80">80 ml</button>
+  </div>
+  <button class="cart-btn" id="openCart">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+    Carrito <span class="cart-count" id="cartCount">0</span>
+  </button>
+</header>
+
+<section class="hero">
+  <div>
+    <div class="hero-eyebrow">Catálogo · Tienda virtual</div>
+    <h1>Fragancias seleccionadas,<br>listas para descubrir.</h1>
+  </div>
+  <div class="hero-meta">
+    <span><b id="totalCount">0</b> fragancias disponibles</span>
+    <span>·</span>
+    <span>Envíos a todo el país</span>
+  </div>
+</section>
+
+<div class="cat-rail" id="catRail"></div>
+
+<main>
+  <div class="grid" id="grid"></div>
+</main>
+
+<!-- MODAL DETALLE -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <div class="modal-art" id="modalArt">
+      <button class="modal-close" id="closeModal">&times;</button>
+    </div>
+    <div class="modal-info" id="modalInfo"></div>
+  </div>
+</div>
+
+<!-- CARRITO -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h2>Tu carrito</h2>
+    <button class="drawer-close" id="closeDrawer">&times;</button>
+  </div>
+  <div class="drawer-items" id="drawerItems"></div>
+  <div class="drawer-foot" id="drawerFoot"></div>
+</aside>
+
+<script src="assets/js/catalogo.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+  :root{
+    --ink-900:#100e0b; --ink-800:#1c1812; --ink-700:#272119;
+    --ivory:#ede6d6; --ivory-dim:#a9a094;
+    --gold:#b4914f; --gold-soft:#8d7440;
+    --sage:#7c8a6c; --danger:#b25c4f;
+    --line:rgba(237,230,214,0.10); --line-strong:rgba(237,230,214,0.20);
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(circle at 50% 0%, rgba(180,145,79,0.07), transparent 55%),
+      var(--ink-900);
+    color:var(--ivory); font-family:'Inter',sans-serif; min-height:100vh;
+    display:flex; align-items:center; justify-content:center; padding:24px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit; text-decoration:none;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+
+  .top-brand{
+    position:fixed; top:28px; left:32px; font-family:'Fraunces',serif; font-style:italic;
+    font-weight:500; font-size:1.1rem;
+  }
+  .top-brand span{color:var(--gold);}
+  .top-tag{
+    position:fixed; top:32px; right:32px; font-family:'IBM Plex Mono',monospace; font-size:0.68rem;
+    letter-spacing:0.1em; color:var(--ivory-dim); text-transform:uppercase; border:1px solid var(--line-strong);
+    padding:5px 12px; border-radius:12px;
+  }
+
+  .panel{
+    width:100%; max-width:380px; background:var(--ink-800); border:1px solid var(--line-strong);
+    border-radius:var(--radius); padding:40px 36px;
+  }
+  .panel-eyebrow{
+    font-family:'IBM Plex Mono',monospace; font-size:0.68rem; letter-spacing:0.14em; color:var(--gold);
+    text-transform:uppercase; text-align:center; margin-bottom:10px;
+  }
+  .panel h1{
+    font-family:'Fraunces',serif; font-weight:400; font-size:1.5rem; text-align:center; margin:0 0 28px;
+  }
+
+  .role-select{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:28px;}
+  .role-btn{
+    display:flex; flex-direction:column; align-items:center; gap:8px; padding:16px 10px;
+    background:var(--ink-700); border:1px solid var(--line); border-radius:var(--radius); cursor:pointer;
+    color:var(--ivory-dim); transition:all .15s ease;
+  }
+  .role-btn svg{opacity:0.6; transition:opacity .15s ease;}
+  .role-btn span{font-size:0.82rem; font-weight:500;}
+  .role-btn:hover{border-color:var(--gold-soft);}
+  .role-btn.active{border-color:var(--gold); color:var(--ivory); background:rgba(180,145,79,0.08);}
+  .role-btn.active svg{opacity:1; color:var(--gold);}
+
+  .field{margin-bottom:18px;}
+  .field label{display:block; font-size:0.78rem; color:var(--ivory-dim); margin-bottom:7px;}
+  .field input{
+    width:100%; padding:12px 14px; background:var(--ink-900); border:1px solid var(--line);
+    color:var(--ivory); font-family:'Inter',sans-serif; font-size:0.9rem; border-radius:var(--radius); outline:none;
+  }
+  .field input:focus{border-color:var(--gold-soft);}
+  .field-error{font-size:0.72rem; color:var(--danger); margin-top:6px; display:none;}
+  .field.invalid input{border-color:var(--danger);}
+  .field.invalid .field-error{display:block;}
+
+  .row-between{display:flex; justify-content:flex-end; margin-bottom:22px;}
+  .link-muted{font-size:0.78rem; color:var(--ivory-dim); background:none; border:none; cursor:pointer; padding:0; font-family:'Inter',sans-serif;}
+  .link-muted:hover{color:var(--gold);}
+
+  .btn-primary{
+    width:100%; background:var(--gold); color:var(--ink-900); border:none; padding:13px;
+    font-weight:600; font-size:0.9rem; border-radius:var(--radius); cursor:pointer; font-family:'Inter',sans-serif;
+  }
+  .btn-primary:hover{background:#c4a25e;}
+
+  .panel-foot{
+    text-align:center; font-size:0.72rem; color:var(--ivory-dim); margin-top:24px; line-height:1.6;
+  }
+  .panel-foot a{color:var(--gold-soft); font-size:0.72rem;}
+
+  .lockout-note{
+    display:flex; gap:10px; align-items:flex-start; background:rgba(178,92,79,0.1); border:1px solid rgba(178,92,79,0.3);
+    padding:12px 14px; border-radius:var(--radius); font-size:0.76rem; color:var(--ivory-dim); margin-bottom:20px; display:none;
+  }
+  .lockout-note.show{display:flex;}
+  .lockout-note b{color:var(--danger);}

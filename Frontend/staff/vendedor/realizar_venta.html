@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essence & Co. — Nueva venta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/ventas.css">
+</head>
+<body>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="sb-brand">Essence <span>&</span> Co.</div>
+    <nav class="sb-nav">
+      <div class="sb-item active"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Nueva venta</div>
+      <div class="sb-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>Pedidos web</div>
+      <div class="sb-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>Historial de ventas</div>
+      <div class="sb-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>Mi perfil</div>
+    </nav>
+    <div class="sb-foot"><b>Carlos Ruiz</b>Vendedor · Tienda Trujillo</div>
+  </aside>
+
+  <div class="layout">
+    <div class="work-area">
+      <div class="top-row">
+        <h1>Nueva venta</h1>
+        <p>Busca al cliente, agrega los productos y registra la venta en mostrador.</p>
+      </div>
+
+      <div class="client-block" id="clientBlock"></div>
+
+      <div class="prod-search">
+        <input type="text" id="prodSearch" placeholder="Buscar producto por nombre, código o categoría">
+      </div>
+      <div class="prod-grid" id="prodGrid"></div>
+    </div>
+
+    <aside class="ticket" id="ticket"></aside>
+  </div>
+</div>
+
+<script src="assets/js/ventas.js"></script>
+</body>
+</html>

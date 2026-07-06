@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essence & Co. — Reportes de ventas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/reportes.css">
+</head>
+<body>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="sb-brand">Essence <span>&</span> Co.</div>
+    <nav class="sb-nav">
+      <div class="sb-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>Resumen</div>
+      <div class="sb-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>Inventario</div>
+      <div class="sb-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 2h6l1 4H8l1-4z"/><path d="M4 6h16l-1.5 14a1 1 0 01-1 1H6.5a1 1 0 01-1-1L4 6z"/></svg>Órdenes de compra</div>
+      <div class="sb-item active"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>Reportes de ventas</div>
+      <div class="sb-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>Vendedores</div>
+    </nav>
+    <div class="sb-foot"><b>Rosa Medina</b>Administradora</div>
+  </aside>
+
+  <main class="main">
+    <div class="top-row">
+      <h1>Reportes de ventas</h1>
+      <p>Consulta el historial de ventas y expórtalo para la toma de decisiones.</p>
+    </div>
+
+    <div class="filters">
+      <div class="field"><label>Desde</label><input type="date" id="fDesde"></div>
+      <div class="field"><label>Hasta</label><input type="date" id="fHasta"></div>
+      <div class="field">
+        <label>Vendedor</label>
+        <select id="fVendedor">
+          <option value="">Todos</option>
+          <option>Carlos Ruiz</option>
+          <option>Ana Torres</option>
+          <option>Miguel Sánchez</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Producto</label>
+        <input type="text" id="fProducto" placeholder="Nombre del producto">
+      </div>
+      <button class="btn-primary" id="genBtn">Generar reporte</button>
+      <button class="btn-ghost" id="clearBtn">Limpiar filtros</button>
+    </div>
+
+    <div id="reportArea">
+      <div class="empty-report">
+        <div class="glyph">&#128203;</div>
+        <h3>Aún no generaste ningún reporte</h3>
+        <p>Aplica filtros o presiona "Generar reporte" para ver todas las ventas disponibles.</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+<button class="demo-toggle" id="demoToggle">Modo sustentación: forzar error al exportar (OFF)</button>
+
+<script src="assets/js/reportes.js"></script>
+</body>
+</html>

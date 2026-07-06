@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essence & Co. — Realizar pago</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/pago.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="brand">Essence <span>&</span> Co.</a>
+  <div class="steps">
+    <span class="done">01 · Carrito</span><span class="sep">—</span>
+    <span class="done">02 · Datos</span><span class="sep">—</span>
+    <span class="active">03 · Pago</span>
+  </div>
+  <a href="carrito.html" class="back-link">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Volver al carrito
+  </a>
+</header>
+
+<div class="page-head">
+  <h1>Realizar pago</h1>
+  <p>Elige tu método de pago para completar el pedido.</p>
+</div>
+
+<main>
+  <div>
+    <div class="method-select">
+      <div class="method-card active" data-method="yape">
+        <div class="method-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="18" x2="15" y2="18"/></svg>
+        </div>
+        <div><div class="method-name">Yape</div><div class="method-sub">Pago desde tu celular</div></div>
+      </div>
+      <div class="method-card" data-method="tarjeta">
+        <div class="method-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        </div>
+        <div><div class="method-name">Tarjeta</div><div class="method-sub">Débito o crédito</div></div>
+      </div>
+    </div>
+
+    <div id="formArea"></div>
+  </div>
+
+  <div class="summary">
+    <h2>Resumen del pedido</h2>
+    <div class="sum-item"><span>Noir Ambré · 50 ml × 2</span><span>S/ 378</span></div>
+    <div class="sum-item"><span>Citrus Nova · 80 ml × 1</span><span>S/ 129</span></div>
+    <div class="sum-item"><span>Bois Sauvage · 50 ml × 2</span><span>S/ 398</span></div>
+    <div class="sum-item"><span>Envío</span><span>S/ 12</span></div>
+    <div class="sum-row total"><span>Total a pagar</span><span>S/ 917</span></div>
+  </div>
+</main>
+
+<div class="overlay" id="overlay">
+  <div class="result-card" id="resultCard"></div>
+</div>
+
+<button class="demo-toggle" id="demoToggle">Modo sustentación: forzar pago rechazado (OFF)</button>
+
+<script src="assets/js/pago.js"></script>
+</body>
+</html>

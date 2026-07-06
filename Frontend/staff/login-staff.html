@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essence & Co. — Panel administrativo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/login_staff.css">
+</head>
+<body>
+
+<a href="index.html" class="top-brand">Essence <span>&</span> Co.</a>
+<div class="top-tag">Acceso restringido</div>
+
+<div class="panel">
+  <div class="panel-eyebrow">Panel administrativo</div>
+  <h1 id="panelTitle">Inicia sesión</h1>
+
+  <div class="role-select">
+    <div class="role-btn active" data-role="vendedor">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2h12l2 5H4l2-5z"/><path d="M4 7v12a2 2 0 002 2h12a2 2 0 002-2V7"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+      <span>Vendedor</span>
+    </div>
+    <div class="role-btn" data-role="administrador">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
+      <span>Administrador</span>
+    </div>
+  </div>
+
+  <div class="lockout-note" id="lockoutNote">
+    <span>&#9888;</span>
+    <span>Sesión cerrada por inactividad. <b>Vuelve a iniciar sesión</b> para continuar.</span>
+  </div>
+
+  <div class="field" id="fUser">
+    <label id="userLabel">Usuario</label>
+    <input type="text" placeholder="usuario.vendedor">
+    <div class="field-error">Este campo es obligatorio.</div>
+  </div>
+  <div class="field" id="fPass">
+    <label>Contraseña</label>
+    <input type="password" placeholder="••••••••">
+    <div class="field-error">La contraseña es obligatoria.</div>
+  </div>
+
+  <div class="row-between">
+    <button class="link-muted" id="goRecover">¿Olvidaste tu contraseña?</button>
+  </div>
+
+  <button class="btn-primary" id="submitBtn">Ingresar como Vendedor</button>
+
+  <div class="panel-foot">
+    Acceso exclusivo para personal autorizado de Essence & Co.<br>
+    ¿Problemas para ingresar? <a href="#">Contacta a soporte técnico</a>
+  </div>
+</div>
+
+<script src="assets/js/login_staff.js"></script>
+</body>
+</html>

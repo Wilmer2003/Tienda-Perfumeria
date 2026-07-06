@@ -1,0 +1,107 @@
+/* ============================================
+   Essence & Co. — Tokens de diseño compartidos
+   Este archivo se enlaza en TODAS las pantallas.
+   Contiene solo variables y resets base.
+   Los estilos propios de cada pantalla van en su
+   propio archivo (catalogo.css, carrito.css, etc.)
+   ============================================ */
+
+:root{
+  /* Paleta base */
+  --ink-900:#15120e;
+  --ink-800:#211d17;
+  --ink-700:#2c271e;
+  --ivory:#ede6d6;
+  --ivory-dim:#b8b0a0;
+  --gold:#b4914f;
+  --gold-soft:#8d7440;
+  --rose:#a56b62;
+  --sage:#7c8a6c;
+  --danger:#b25c4f;
+  --line:rgba(237,230,214,0.12);
+  --line-strong:rgba(237,230,214,0.22);
+  --radius:2px;
+
+  /* Variante usada en pantallas de staff (tono un poco más oscuro/sobrio) */
+  --ink-900-staff:#100e0b;
+  --ink-800-staff:#1c1812;
+  --ink-700-staff:#272119;
+  --ivory-dim-staff:#a9a094;
+  --line-staff:rgba(237,230,214,0.10);
+  --line-strong-staff:rgba(237,230,214,0.20);
+
+  /* Papel (usado en el comprobante/boleta) */
+  --paper:#efe9db;
+  --paper-dim:#6b6355;
+  --paper-line:rgba(30,26,20,0.14);
+}
+
+*{box-sizing:border-box;}
+html,body{margin:0; padding:0;}
+body{
+  background:var(--ink-900);
+  color:var(--ivory);
+  font-family:'Inter',sans-serif;
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;}
+
+.mono{font-family:'IBM Plex Mono',monospace;}
+.display{font-family:'Fraunces',serif;}
+
+/* Botones base — reutilizados en todas las pantallas */
+.btn-primary{
+  background:var(--gold);
+  color:var(--ink-900);
+  border:none;
+  padding:13px;
+  font-weight:600;
+  font-size:0.9rem;
+  border-radius:var(--radius);
+  cursor:pointer;
+  font-family:'Inter',sans-serif;
+}
+.btn-primary:hover{background:#c4a25e;}
+.btn-primary:disabled{background:var(--ink-700); color:var(--ivory-dim); cursor:not-allowed;}
+
+.btn-ghost{
+  background:none;
+  border:1px solid var(--line-strong);
+  color:var(--ivory);
+  padding:13px;
+  font-weight:500;
+  font-size:0.85rem;
+  border-radius:var(--radius);
+  cursor:pointer;
+  font-family:'Inter',sans-serif;
+}
+.btn-ghost:hover{border-color:var(--gold-soft);}
+
+/* Campos de formulario base */
+.field{margin-bottom:18px;}
+.field label{display:block; font-size:0.78rem; color:var(--ivory-dim); margin-bottom:7px;}
+.field input, .field select{
+  width:100%;
+  padding:12px 14px;
+  background:var(--ink-800);
+  border:1px solid var(--line);
+  color:var(--ivory);
+  font-family:'Inter',sans-serif;
+  font-size:0.9rem;
+  border-radius:var(--radius);
+  outline:none;
+}
+.field input:focus, .field select:focus{border-color:var(--gold-soft);}
+.field-error{font-size:0.72rem; color:var(--danger); margin-top:6px; display:none;}
+.field.invalid input{border-color:var(--danger);}
+.field.invalid .field-error{display:block;}
+
+/* Demo toggle (botones "modo sustentación") */
+.demo-toggle{
+  position:fixed; bottom:20px; left:20px;
+  font-family:'IBM Plex Mono',monospace; font-size:0.66rem;
+  color:var(--ivory-dim); background:var(--ink-800); border:1px solid var(--line-strong);
+  padding:8px 12px; border-radius:var(--radius); cursor:pointer; z-index:30; opacity:0.7;
+}
+.demo-toggle:hover{opacity:1;}
