@@ -13,7 +13,6 @@
 ---
 
 ## 👥 Integrantes del Equipo
-
 * 🧑‍💻 **Maximiliano Villanueva, Jhon**
 * 🧑‍💻 **Sandoval Vargas, Robert**
 * 🧑‍💻 **Silva López, Wilmer** (Product Owner / Administrador del Repositorio)
